@@ -118,7 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="W2D - MUM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - MUM1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D1 - BLR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D1 - BLR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - GUR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - GUR1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logowhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logowhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - BLR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - BLR2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - HYD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - HYD1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - BLR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - BLR1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - HYD1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - HYD2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - MUM1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - MUM2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D1 - BLR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D1 - BLR1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="W2D - GUR1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\W2D - GUR2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

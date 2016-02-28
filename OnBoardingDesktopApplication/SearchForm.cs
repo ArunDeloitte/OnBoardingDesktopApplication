@@ -83,13 +83,9 @@ namespace OnBoardingDesktopApplication
                     lblDtlTableNumber.Text = "10";
                     lblLaptopStatus.Text = VARIABLE["Laptop_Status"].ToString();
                     string _status = VARIABLE["W2D_Day1"].ToString();
-                    if(_status.Equals("Attended",StringComparison.OrdinalIgnoreCase))
-                        btnDay1.BackColor = ColorTranslator.FromHtml("#99ca49");
-                    else btnDay1.BackColor = Color.DarkRed;
+                    btnDay1.BackColor = _status.Equals("Attended",StringComparison.OrdinalIgnoreCase) ? ColorTranslator.FromHtml("#99ca49") : Color.DarkRed;
                     _status = VARIABLE["W2D_Day2"].ToString();
-                    if (_status.Equals("Attended", StringComparison.OrdinalIgnoreCase))
-                        btnDay1.BackColor = ColorTranslator.FromHtml("#99ca49");
-                    else btnDay1.BackColor = Color.DarkRed;
+                    btnDay1.BackColor = _status.Equals("Attended", StringComparison.OrdinalIgnoreCase) ? ColorTranslator.FromHtml("#99ca49") : Color.DarkRed;
 
                     string _bgv = VARIABLE["BGV"].ToString();
 
@@ -254,7 +250,7 @@ namespace OnBoardingDesktopApplication
                         _accDbCon);
                 _acDbCommand.ExecuteNonQuery();
                     btnDay2.BackColor=Color.DarkRed;
-                    ;
+                    
                 }
 
                 if (result == DialogResult.Cancel)
@@ -287,6 +283,7 @@ namespace OnBoardingDesktopApplication
                             "update  OnBoarding set W2D_Day2='Attended' where Candidate_ID=" + txtRMSID.Text,
                             _accDbCon);
                     _acDbCommand.ExecuteNonQuery();
+                    btnDay1.BackColor = ColorTranslator.FromHtml("#99ca49");
                 }
 
                 if (result == DialogResult.No)
@@ -298,6 +295,7 @@ namespace OnBoardingDesktopApplication
                             "update  OnBoarding set W2D_Day2='Not Attended' where Candidate_ID=" + txtRMSID.Text,
                             _accDbCon);
                     _acDbCommand.ExecuteNonQuery();
+                    btnDay2.BackColor = Color.DarkRed;
                 }
 
                 if (result == DialogResult.Cancel)
@@ -322,6 +320,11 @@ namespace OnBoardingDesktopApplication
             Form1 nForm1=new Form1(lblUser.Text);
             nForm1.Show();
             Hide();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
 
     }

@@ -32,6 +32,7 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.welcome2DeloitteDataSet = new OnBoardingDesktopApplication.Welcome2DeloitteDataSet();
             this.reportsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportsViewTableAdapter = new OnBoardingDesktopApplication.Welcome2DeloitteDataSetTableAdapters.ReportsViewTableAdapter();
@@ -100,7 +101,6 @@
             this.w2DDay1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.w2DDay2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDownload = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.welcome2DeloitteDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsViewBindingSource)).BeginInit();
@@ -110,7 +110,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(29)))), ((int)(((byte)(93)))));
             this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.lblUser);
             this.pnlHeader.Controls.Add(this.pnlLogo);
@@ -140,6 +140,15 @@
             this.lblUser.Size = new System.Drawing.Size(109, 27);
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Something";
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.logowhite;
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(198, 65);
+            this.pnlLogo.TabIndex = 0;
             // 
             // welcome2DeloitteDataSet
             // 
@@ -605,7 +614,7 @@
             // 
             // btnDownload
             // 
-            this.btnDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.btnDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(29)))), ((int)(((byte)(93)))));
             this.btnDownload.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDownload.Location = new System.Drawing.Point(337, 425);
             this.btnDownload.Name = "btnDownload";
@@ -614,15 +623,6 @@
             this.btnDownload.Text = "DOWNLOAD";
             this.btnDownload.UseVisualStyleBackColor = false;
             this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.logowhite;
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(198, 65);
-            this.pnlLogo.TabIndex = 0;
             // 
             // AdminReport
             // 

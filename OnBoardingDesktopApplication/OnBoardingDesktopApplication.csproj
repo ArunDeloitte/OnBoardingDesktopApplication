@@ -179,6 +179,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logowhite.png" />
+    <Content Include="Resources\W2D - BLR.jpg" />
+    <None Include="Resources\W2D - BLR1.jpg" />
+    <None Include="Resources\W2D - BLR2.jpg" />
+    <None Include="Resources\W2D - GUR1.jpg" />
+    <None Include="Resources\W2D - GUR2.jpg" />
+    <None Include="Resources\W2D - HYD1.jpg" />
+    <None Include="Resources\W2D - HYD2.jpg" />
+    <None Include="Resources\W2D - MUM1.jpg" />
+    <None Include="Resources\W2D - MUM2.jpg" />
+    <None Include="Resources\W2D1 - BLR1.jpg" />
+    <Content Include="Resources\W2D - GUR.jpg" />
+    <Content Include="Resources\W2D - HYD.jpg" />
+    <Content Include="Resources\W2D - MUM.jpg" />
+    <Content Include="Resources\W2D1 - BLR.jpg" />
     <Content Include="Resource\dBase\Welcome2Deloitte.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
