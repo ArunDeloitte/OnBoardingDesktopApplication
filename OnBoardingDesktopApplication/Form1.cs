@@ -19,7 +19,7 @@ namespace OnBoardingDesktopApplication
             InitializeComponent();
             if (username != string.Empty)
             {
-                if (username.Equals("SuperUser"))
+                if (username.Equals("SuperUser") || username.Equals("W2D Administartor"))
                 {
                     username = "W2D Administartor";
                     
@@ -28,7 +28,7 @@ namespace OnBoardingDesktopApplication
                 {
                     username = "USI ITS User";
                 }
-                else
+                else if (username.Equals("USI Logistics") || username.Equals("USILogistics"))
                 {
                     username = "USI Logistics";
                 }
@@ -61,7 +61,32 @@ namespace OnBoardingDesktopApplication
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            if (lblUser.Text.Equals("W2D Administartor") || lblUser.Text.Equals("USI Logistics"))
+            {
+                var nForm1 = new AdminReport(lblUser.Text, "All");
+                nForm1.Show();
+            }
+            else
+            {
+                var nForm1 = new ReportITS();
+                nForm1.Show();
+            }
 
+            this.Hide();
+        }
+
+        private void pnlHyd_Click(object sender, EventArgs e)
+        {
+            var nForm1 = new AdminReport(lblUser.Text, "BLR");
+            nForm1.Show();
+            Hide();
+        }
+
+        private void btnLogOff_Click(object sender, EventArgs e)
+        {
+            var nForm1 = new LoginForm();
+            nForm1.Show();
+            Hide();
         }
     }
 }

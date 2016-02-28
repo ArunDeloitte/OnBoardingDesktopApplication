@@ -2,28 +2,59 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using System.Xml.Schema;
 
 
 namespace OnBoardingDesktopApplication
 {
     public partial class AdminReport : Form
     {
-        public AdminReport()
+        private string _rReports;
+        private DataTable _dataTable;
+        public AdminReport(string username,string report)
         {
             InitializeComponent();
+            if (username.Equals("SuperUser"))
+            {
+                username = "W2D Administartor";
+
+            }
+            else if (username.Equals("USI Logistics"))
+            {
+                username = "USI Logistics";
+                
+            }
+            lblUser.Text = username;
+            _rReports = report;
         }
 
         private void AdminReport_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'welcome2DeloitteDataSet.OnBoarding' table. You can move, or remove it, as needed.
-            this.onBoardingTableAdapter.Fill(this.welcome2DeloitteDataSet.OnBoarding);
+            switch(_rReports)
+            {
+                case "All":
+                // TODO: This line of code loads data into the 'welcome2DeloitteDataSet.OnBoarding' table. You can move, or remove it, as needed.
+                this.onBoardingTableAdapter.Fill(this.welcome2DeloitteDataSet.OnBoarding);
+                    break;
+                case "BLR":
+                    // TODO: This line of code loads data into the 'welcome2DeloitteDataSet.OnBoarding' table. You can move, or remove it, as needed.
+                    //this.onBoardingTableAdapter.Fill();
+                    _dataTable=new Welcome2DeloitteDataSet.Location_BangaloreDataTable();
+                    dgvAdminReport.DataSource = _dataTable;
+                    break;
+
+            }
+
             
         }
+
+        public void DataLoad()
+        {
+
+        }
+
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
@@ -71,7 +102,7 @@ namespace OnBoardingDesktopApplication
 
 
                 // save the application
-                workbook.SaveAs("C:\\Users\\achuthabhanu\\Downloads\\Onboarding2Deloitte.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                workbook.SaveAs("C:\\OnBoarding\\Onboarding2Deloitte_"+ DateTime.Now.ToString("ddMMyyyy_HHmmss")+".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
 
                 // Exit from the application
                 app.Quit();
@@ -80,6 +111,13 @@ namespace OnBoardingDesktopApplication
             {
                 throw ex;
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 nForm1 = new Form1(lblUser.Text);
+            nForm1.Show();
+            Hide();
         }
     }
 }

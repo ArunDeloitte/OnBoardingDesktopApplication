@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label11 = new System.Windows.Forms.Label();
             this.lblJoiningStatus = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.txtRMSID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSeqNo = new System.Windows.Forms.TextBox();
@@ -51,17 +50,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.btnNotIssued = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnReady = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlDetails = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lbDtlPhone = new System.Windows.Forms.Label();
             this.lblDtlName = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblDtlRegisteredEmailId = new System.Windows.Forms.Label();
@@ -74,21 +74,15 @@
             this.lblDtlTOHire = new System.Windows.Forms.Label();
             this.lblDtlTableNumber = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.welcome2DeloitteDataSet = new OnBoardingDesktopApplication.Welcome2DeloitteDataSet();
-            this.domainsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.domainsTableAdapter = new OnBoardingDesktopApplication.Welcome2DeloitteDataSetTableAdapters.DomainsTableAdapter();
-            this.domainsOnBoardingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.onBoardingTableAdapter = new OnBoardingDesktopApplication.Welcome2DeloitteDataSetTableAdapters.OnBoardingTableAdapter();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblDtlPhone = new System.Windows.Forms.Label();
+            this.lblLaptopStatus = new System.Windows.Forms.Label();
             this.pnlSearch.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlDetails.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.welcome2DeloitteDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domainsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domainsOnBoardingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -132,27 +126,28 @@
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox2
+            // txtEmployeeID
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtEmployeeID.Location = new System.Drawing.Point(174, 199);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(167, 20);
+            this.txtEmployeeID.TabIndex = 14;
             // 
-            // textBox1
+            // txtRMSID
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtRMSID.Location = new System.Drawing.Point(174, 173);
+            this.txtRMSID.Name = "txtRMSID";
+            this.txtRMSID.Size = new System.Drawing.Size(167, 20);
+            this.txtRMSID.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
-            this.label8.Location = new System.Drawing.Point(17, 202);
+            this.label8.Location = new System.Drawing.Point(13, 202);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 12;
@@ -163,7 +158,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
-            this.label7.Location = new System.Drawing.Point(17, 176);
+            this.label7.Location = new System.Drawing.Point(13, 176);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 11;
@@ -240,6 +235,7 @@
             this.btnBarCode.TabIndex = 11;
             this.btnBarCode.Text = "Search for Candidate";
             this.btnBarCode.UseVisualStyleBackColor = false;
+            this.btnBarCode.Click += new System.EventHandler(this.btnBarCode_Click);
             // 
             // label5
             // 
@@ -292,15 +288,16 @@
             // pnlSearch
             // 
             this.pnlSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlSearch.Controls.Add(this.button2);
+            this.pnlSearch.Controls.Add(this.lblLaptopStatus);
+            this.pnlSearch.Controls.Add(this.btnNotIssued);
             this.pnlSearch.Controls.Add(this.comboBox1);
-            this.pnlSearch.Controls.Add(this.button1);
+            this.pnlSearch.Controls.Add(this.btnReady);
             this.pnlSearch.Controls.Add(this.label11);
             this.pnlSearch.Controls.Add(this.lblJoiningStatus);
             this.pnlSearch.Controls.Add(this.label10);
             this.pnlSearch.Controls.Add(this.btnSearch);
-            this.pnlSearch.Controls.Add(this.textBox2);
-            this.pnlSearch.Controls.Add(this.textBox1);
+            this.pnlSearch.Controls.Add(this.txtEmployeeID);
+            this.pnlSearch.Controls.Add(this.txtRMSID);
             this.pnlSearch.Controls.Add(this.label8);
             this.pnlSearch.Controls.Add(this.label7);
             this.pnlSearch.Controls.Add(this.txtSeqNo);
@@ -318,24 +315,49 @@
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(368, 386);
             this.pnlSearch.TabIndex = 9;
-            this.pnlSearch.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSearch_Paint);
+            // 
+            // btnNotIssued
+            // 
+            this.btnNotIssued.Location = new System.Drawing.Point(203, 360);
+            this.btnNotIssued.Name = "btnNotIssued";
+            this.btnNotIssued.Size = new System.Drawing.Size(124, 23);
+            this.btnNotIssued.TabIndex = 22;
+            this.btnNotIssued.Text = "Not Issued";
+            this.btnNotIssued.UseVisualStyleBackColor = true;
+            this.btnNotIssued.Click += new System.EventHandler(this.btnNotIssued_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "HRO Status Issue",
+            "AD Account Inactive",
+            "User Not Assigned"});
+            this.comboBox1.Location = new System.Drawing.Point(203, 333);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // btnReady
+            // 
+            this.btnReady.Location = new System.Drawing.Point(203, 300);
+            this.btnReady.Name = "btnReady";
+            this.btnReady.Size = new System.Drawing.Size(124, 23);
+            this.btnReady.TabIndex = 20;
+            this.btnReady.Text = "Ready to Issue";
+            this.btnReady.UseVisualStyleBackColor = true;
+            this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.pnlHeader.Controls.Add(this.lblUser);
+            this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Location = new System.Drawing.Point(1, -2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(774, 61);
             this.pnlHeader.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(622, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 144);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
             // 
             // pnlLogo
             // 
@@ -346,15 +368,13 @@
             this.pnlLogo.Size = new System.Drawing.Size(197, 62);
             this.pnlLogo.TabIndex = 0;
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.Location = new System.Drawing.Point(203, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Ready to Issue";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox2.Location = new System.Drawing.Point(622, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 144);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
             // 
             // pnlDetails
             // 
@@ -377,7 +397,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label16, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label20, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbDtlPhone, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlRegisteredEmailId, 1, 1);
@@ -389,6 +408,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblDtlFunction, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlTOHire, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlTableNumber, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblDtlPhone, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 36);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -446,14 +466,6 @@
             this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 3;
             this.label13.Text = " Name:";
-            // 
-            // lbDtlPhone
-            // 
-            this.lbDtlPhone.AutoSize = true;
-            this.lbDtlPhone.Location = new System.Drawing.Point(189, 52);
-            this.lbDtlPhone.Name = "lbDtlPhone";
-            this.lbDtlPhone.Size = new System.Drawing.Size(0, 13);
-            this.lbDtlPhone.TabIndex = 11;
             // 
             // lblDtlName
             // 
@@ -566,49 +578,43 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Details";
             // 
-            // comboBox1
+            // btnBack
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "HRO Status Issue",
-            "AD Account Inactive",
-            "User Not Assigned"});
-            this.comboBox1.Location = new System.Drawing.Point(203, 333);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
-            this.comboBox1.TabIndex = 21;
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(639, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(122, 22);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // button2
+            // lblUser
             // 
-            this.button2.Location = new System.Drawing.Point(203, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Not Issued";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUser.Location = new System.Drawing.Point(585, 28);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(109, 27);
+            this.lblUser.TabIndex = 5;
+            this.lblUser.Text = "Something";
             // 
-            // welcome2DeloitteDataSet
+            // lblDtlPhone
             // 
-            this.welcome2DeloitteDataSet.DataSetName = "Welcome2DeloitteDataSet";
-            this.welcome2DeloitteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblDtlPhone.AutoSize = true;
+            this.lblDtlPhone.Location = new System.Drawing.Point(189, 52);
+            this.lblDtlPhone.Name = "lblDtlPhone";
+            this.lblDtlPhone.Size = new System.Drawing.Size(0, 13);
+            this.lblDtlPhone.TabIndex = 22;
             // 
-            // domainsBindingSource
+            // lblLaptopStatus
             // 
-            this.domainsBindingSource.DataMember = "Domains";
-            this.domainsBindingSource.DataSource = this.welcome2DeloitteDataSet;
-            // 
-            // domainsTableAdapter
-            // 
-            this.domainsTableAdapter.ClearBeforeFill = true;
-            // 
-            // domainsOnBoardingBindingSource
-            // 
-            this.domainsOnBoardingBindingSource.DataMember = "DomainsOnBoarding";
-            this.domainsOnBoardingBindingSource.DataSource = this.domainsBindingSource;
-            // 
-            // onBoardingTableAdapter
-            // 
-            this.onBoardingTableAdapter.ClearBeforeFill = true;
+            this.lblLaptopStatus.AutoSize = true;
+            this.lblLaptopStatus.Location = new System.Drawing.Point(95, 289);
+            this.lblLaptopStatus.Name = "lblLaptopStatus";
+            this.lblLaptopStatus.Size = new System.Drawing.Size(0, 13);
+            this.lblLaptopStatus.TabIndex = 23;
             // 
             // Welcome2Deloitte
             // 
@@ -628,14 +634,12 @@
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlDetails.ResumeLayout(false);
             this.pnlDetails.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.welcome2DeloitteDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domainsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.domainsOnBoardingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,8 +651,8 @@
         private System.Windows.Forms.Label lblJoiningStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmployeeID;
+        private System.Windows.Forms.TextBox txtRMSID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSeqNo;
@@ -668,8 +672,8 @@
         private System.Windows.Forms.Panel pnlSearch;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReady;
+        private System.Windows.Forms.Button btnNotIssued;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel pnlDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -677,7 +681,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lbDtlPhone;
         private System.Windows.Forms.Label lblDtlName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblDtlRegisteredEmailId;
@@ -690,10 +693,9 @@
         private System.Windows.Forms.Label lblDtlTOHire;
         private System.Windows.Forms.Label lblDtlTableNumber;
         private System.Windows.Forms.Label label12;
-        private Welcome2DeloitteDataSet welcome2DeloitteDataSet;
-        private System.Windows.Forms.BindingSource domainsBindingSource;
-        private Welcome2DeloitteDataSetTableAdapters.DomainsTableAdapter domainsTableAdapter;
-        private System.Windows.Forms.BindingSource domainsOnBoardingBindingSource;
-        private Welcome2DeloitteDataSetTableAdapters.OnBoardingTableAdapter onBoardingTableAdapter;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblDtlPhone;
+        private System.Windows.Forms.Label lblLaptopStatus;
     }
 }

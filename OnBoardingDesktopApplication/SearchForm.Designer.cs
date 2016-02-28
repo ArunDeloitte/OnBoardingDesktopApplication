@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.btnHold = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.btnDay2 = new System.Windows.Forms.Button();
             this.btnDay1 = new System.Windows.Forms.Button();
             this.lblLaptopStatus = new System.Windows.Forms.Label();
@@ -73,14 +76,12 @@
             this.lblDtlFunction = new System.Windows.Forms.Label();
             this.lblDtlTOHire = new System.Windows.Forms.Label();
             this.lblDtlTableNumber = new System.Windows.Forms.Label();
+            this.lblDtlPhone = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnBarCode = new System.Windows.Forms.Button();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.btnHold = new System.Windows.Forms.Button();
-            this.lblDtlPhone = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.pnlBGV.SuspendLayout();
@@ -92,12 +93,24 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.lblUser);
             this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Location = new System.Drawing.Point(0, 1);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(774, 64);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUser.Location = new System.Drawing.Point(606, 37);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(109, 27);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Something";
             // 
             // pnlLogo
             // 
@@ -140,6 +153,29 @@
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(368, 392);
             this.pnlSearch.TabIndex = 2;
+            // 
+            // btnHold
+            // 
+            this.btnHold.BackColor = System.Drawing.Color.Crimson;
+            this.btnHold.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHold.Location = new System.Drawing.Point(106, 286);
+            this.btnHold.Name = "btnHold";
+            this.btnHold.Size = new System.Drawing.Size(75, 23);
+            this.btnHold.TabIndex = 24;
+            this.btnHold.Text = "Hold";
+            this.btnHold.UseVisualStyleBackColor = false;
+            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(202)))), ((int)(((byte)(73)))));
+            this.btnConfirm.Location = new System.Drawing.Point(24, 286);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(67, 23);
+            this.btnConfirm.TabIndex = 23;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnDay2
             // 
@@ -571,6 +607,14 @@
             this.lblDtlTableNumber.Size = new System.Drawing.Size(0, 13);
             this.lblDtlTableNumber.TabIndex = 21;
             // 
+            // lblDtlPhone
+            // 
+            this.lblDtlPhone.AutoSize = true;
+            this.lblDtlPhone.Location = new System.Drawing.Point(190, 52);
+            this.lblDtlPhone.Name = "lblDtlPhone";
+            this.lblDtlPhone.Size = new System.Drawing.Size(0, 13);
+            this.lblDtlPhone.TabIndex = 22;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -614,47 +658,16 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // btnConfirm
+            // btnBack
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(202)))), ((int)(((byte)(73)))));
-            this.btnConfirm.Location = new System.Drawing.Point(24, 286);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(67, 23);
-            this.btnConfirm.TabIndex = 23;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // btnHold
-            // 
-            this.btnHold.BackColor = System.Drawing.Color.Crimson;
-            this.btnHold.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHold.Location = new System.Drawing.Point(106, 286);
-            this.btnHold.Name = "btnHold";
-            this.btnHold.Size = new System.Drawing.Size(75, 23);
-            this.btnHold.TabIndex = 24;
-            this.btnHold.Text = "Hold";
-            this.btnHold.UseVisualStyleBackColor = false;
-            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
-            // 
-            // lblDtlPhone
-            // 
-            this.lblDtlPhone.AutoSize = true;
-            this.lblDtlPhone.Location = new System.Drawing.Point(190, 52);
-            this.lblDtlPhone.Name = "lblDtlPhone";
-            this.lblDtlPhone.Size = new System.Drawing.Size(0, 13);
-            this.lblDtlPhone.TabIndex = 22;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(606, 37);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(109, 27);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Something";
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(642, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(122, 22);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // SearchForm
             // 
@@ -742,5 +755,6 @@
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lblDtlPhone;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnBack;
     }
 }

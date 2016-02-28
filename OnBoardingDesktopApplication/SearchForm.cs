@@ -317,5 +317,12 @@ namespace OnBoardingDesktopApplication
 
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form1 nForm1=new Form1(lblUser.Text);
+            nForm1.Show();
+            Hide();
+        }
+
     }
 }

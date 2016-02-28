@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.welcome2DeloitteDataSet = new OnBoardingDesktopApplication.Welcome2DeloitteDataSet();
             this.reportsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportsViewTableAdapter = new OnBoardingDesktopApplication.Welcome2DeloitteDataSetTableAdapters.ReportsViewTableAdapter();
@@ -109,11 +111,35 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.pnlHeader.Controls.Add(this.btnBack);
+            this.pnlHeader.Controls.Add(this.lblUser);
             this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(775, 64);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Location = new System.Drawing.Point(642, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(122, 22);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUser.Location = new System.Drawing.Point(576, 38);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(109, 27);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Something";
             // 
             // welcome2DeloitteDataSet
             // 
@@ -141,6 +167,7 @@
             // dgvAdminReport
             // 
             this.dgvAdminReport.AutoGenerateColumns = false;
+            this.dgvAdminReport.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvAdminReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdminReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.candidateIDDataGridViewTextBoxColumn,
@@ -578,12 +605,14 @@
             // 
             // btnDownload
             // 
+            this.btnDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.btnDownload.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDownload.Location = new System.Drawing.Point(337, 425);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(101, 30);
             this.btnDownload.TabIndex = 3;
             this.btnDownload.Text = "DOWNLOAD";
-            this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.UseVisualStyleBackColor = false;
             this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
             // pnlLogo
@@ -599,6 +628,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(776, 465);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.dgvAdminReport);
@@ -607,6 +637,7 @@
             this.Text = "AdminReport";
             this.Load += new System.EventHandler(this.AdminReport_Load);
             this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.welcome2DeloitteDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportsViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onBoardingBindingSource)).EndInit();
@@ -687,5 +718,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn w2DDay1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn w2DDay2DataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDownload;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnBack;
     }
 }
