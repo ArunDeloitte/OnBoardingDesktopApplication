@@ -62,7 +62,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lbDtlPhone = new System.Windows.Forms.Label();
             this.lblDtlName = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblDtlRegisteredEmailId = new System.Windows.Forms.Label();
@@ -80,6 +79,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnHold = new System.Windows.Forms.Button();
+            this.lblDtlPhone = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.pnlBGV.SuspendLayout();
@@ -91,6 +92,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
+            this.pnlHeader.Controls.Add(this.lblUser);
             this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Location = new System.Drawing.Point(0, 1);
             this.pnlHeader.Name = "pnlHeader";
@@ -147,6 +149,7 @@
             this.btnDay2.TabIndex = 22;
             this.btnDay2.Text = "W2D Day2";
             this.btnDay2.UseVisualStyleBackColor = true;
+            this.btnDay2.Click += new System.EventHandler(this.btnDay2_Click);
             // 
             // btnDay1
             // 
@@ -156,6 +159,7 @@
             this.btnDay1.TabIndex = 21;
             this.btnDay1.Text = "W2D Day1";
             this.btnDay1.UseVisualStyleBackColor = true;
+            this.btnDay1.Click += new System.EventHandler(this.btnDay1_Click);
             // 
             // lblLaptopStatus
             // 
@@ -164,9 +168,8 @@
             this.lblLaptopStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(75)))), ((int)(((byte)(147)))));
             this.lblLaptopStatus.Location = new System.Drawing.Point(103, 337);
             this.lblLaptopStatus.Name = "lblLaptopStatus";
-            this.lblLaptopStatus.Size = new System.Drawing.Size(13, 13);
+            this.lblLaptopStatus.Size = new System.Drawing.Size(0, 13);
             this.lblLaptopStatus.TabIndex = 20;
-            this.lblLaptopStatus.Text = "s";
             // 
             // label11
             // 
@@ -398,7 +401,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label16, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label20, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbDtlPhone, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlRegisteredEmailId, 1, 1);
@@ -410,6 +412,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblDtlFunction, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlTOHire, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblDtlTableNumber, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblDtlPhone, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 36);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -467,14 +470,6 @@
             this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 3;
             this.label13.Text = " Name:";
-            // 
-            // lbDtlPhone
-            // 
-            this.lbDtlPhone.AutoSize = true;
-            this.lbDtlPhone.Location = new System.Drawing.Point(190, 52);
-            this.lbDtlPhone.Name = "lbDtlPhone";
-            this.lbDtlPhone.Size = new System.Drawing.Size(0, 13);
-            this.lbDtlPhone.TabIndex = 11;
             // 
             // lblDtlName
             // 
@@ -609,6 +604,7 @@
             this.txtBarcode.Size = new System.Drawing.Size(154, 20);
             this.txtBarcode.TabIndex = 7;
             this.txtBarcode.UseSystemPasswordChar = true;
+            this.txtBarcode.Click += new System.EventHandler(this.txtBarcode_Click);
             // 
             // pictureBox2
             // 
@@ -641,6 +637,25 @@
             this.btnHold.UseVisualStyleBackColor = false;
             this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
             // 
+            // lblDtlPhone
+            // 
+            this.lblDtlPhone.AutoSize = true;
+            this.lblDtlPhone.Location = new System.Drawing.Point(190, 52);
+            this.lblDtlPhone.Name = "lblDtlPhone";
+            this.lblDtlPhone.Size = new System.Drawing.Size(0, 13);
+            this.lblDtlPhone.TabIndex = 22;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUser.Location = new System.Drawing.Point(606, 37);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(109, 27);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "Something";
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,6 +672,7 @@
             this.Name = "SearchForm";
             this.Text = "Welcome2Deloitte";
             this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
             this.pnlBGV.ResumeLayout(false);
@@ -705,7 +721,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lbDtlPhone;
         private System.Windows.Forms.Label lblDtlName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblDtlRegisteredEmailId;
@@ -725,5 +740,7 @@
         private System.Windows.Forms.Button btnDay1;
         private System.Windows.Forms.Button btnHold;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label lblDtlPhone;
+        private System.Windows.Forms.Label lblUser;
     }
 }

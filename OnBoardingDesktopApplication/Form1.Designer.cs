@@ -30,6 +30,7 @@
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
             this.bTNsEARCH = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.pnlMum = new System.Windows.Forms.Panel();
             this.pnlBlr = new System.Windows.Forms.Panel();
             this.pnlHyd = new System.Windows.Forms.Panel();
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlOverview.SuspendLayout();
@@ -58,13 +58,22 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(613, 25);
+            this.lblUser.Location = new System.Drawing.Point(608, 37);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(158, 39);
+            this.lblUser.Size = new System.Drawing.Size(109, 27);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "Something";
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.logowhite;
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 3);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(197, 62);
+            this.pnlLogo.TabIndex = 0;
             // 
             // pnlNavigation
             // 
@@ -154,15 +163,6 @@
             this.pnlHyd.Name = "pnlHyd";
             this.pnlHyd.Size = new System.Drawing.Size(261, 151);
             this.pnlHyd.TabIndex = 0;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.logowhite;
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 3);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(197, 62);
-            this.pnlLogo.TabIndex = 0;
             // 
             // Form1
             // 

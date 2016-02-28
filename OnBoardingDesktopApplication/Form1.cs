@@ -47,7 +47,7 @@ namespace OnBoardingDesktopApplication
         {
             if (lblUser.Text.Equals("W2D Administartor") || lblUser.Text.Equals("USI Logistics"))
             {
-                var nForm1 = new SearchForm();
+                var nForm1 = new SearchForm(lblUser.Text);
                 nForm1.Show();
             }
             else
