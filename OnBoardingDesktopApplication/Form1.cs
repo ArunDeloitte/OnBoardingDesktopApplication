@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OnBoardingDesktopApplication.Properties;
 
 namespace OnBoardingDesktopApplication
 {
@@ -87,6 +88,24 @@ namespace OnBoardingDesktopApplication
             var nForm1 = new LoginForm();
             nForm1.Show();
             Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (lblUser.Text.Equals("W2D Administartor") || lblUser.Text.Equals("USI Logistics"))
+            {
+                pnlHyd.BackgroundImage = Resources.BLR___W2D_Screen;
+                pnlBlr.BackgroundImage = Resources.HYD___W2D_Screen;
+                pnlGur.BackgroundImage = Resources.GUR___W2D_Screen;
+                pnlMum.BackgroundImage = Resources.MUM___W2D_Screen;
+            }
+            else
+            {
+                pnlHyd.BackgroundImage = Resources.BLR___ITS_Screen;
+                pnlBlr.BackgroundImage = Resources.HYD___ITS_Screen;
+                pnlGur.BackgroundImage = Resources.GUR___ITS_Screen;
+                pnlMum.BackgroundImage = Resources.MUM___ITS_Screen;
+            }
         }
     }
 }

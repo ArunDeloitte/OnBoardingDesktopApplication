@@ -47,6 +47,8 @@ namespace OnBoardingDesktopApplication
                     btnDay2.Visible = false;
                 }
                 lblUser.Text = username;
+                lblBGV.Visible = false;
+                lblLapTop.Visible = false;
             }
         }
 
@@ -73,23 +75,23 @@ namespace OnBoardingDesktopApplication
                     txtSeqNo.Text = VARIABLE["Sequence_Number"].ToString();
                     txtRMSID.Text = VARIABLE["Candidate_ID"].ToString();
                     txtEmployeeID.Text = VARIABLE["Employee_ID"].ToString();
-                    lblDtlName.Text = VARIABLE["CandidateFirstName"].ToString() + VARIABLE["CandidateLastName"].ToString();
-                    lblDtlRegisteredEmailId.Text = VARIABLE["CandidateEmail"].ToString();
+                    lblDtlName.Text = VARIABLE["CandidateFirstName"].ToString() +" "+ VARIABLE["CandidateLastName"].ToString();
+                    lblDtlEmail.Text = VARIABLE["CandidateEmail"].ToString();
                     lblDtlPhone.Text = VARIABLE["CandidateMobilePhone"].ToString();
-                    lblDtlW2DDate.Text = VARIABLE["Tentative_StartDate"].ToString();
+                    lblOffCycle.Text = DateTime.Parse(VARIABLE["Tentative_StartDate"].ToString()).ToString("yy-MMM-dd ddd") + " "+VARIABLE["W2D_OffCycle"].ToString();
                     lblDtlLocation.Text = VARIABLE["Hiring_Location"].ToString();
                     lblDtlFunction.Text = VARIABLE["Function"].ToString();
-                    lblDtlTOHire.Text = VARIABLE["TypeofHire"].ToString();
-                    lblDtlTableNumber.Text = "10";
-                    lblLaptopStatus.Text = VARIABLE["Laptop_Status"].ToString();
-                    string _status = VARIABLE["W2D_Day1"].ToString();
-                    btnDay1.BackColor = _status.Equals("Attended",StringComparison.OrdinalIgnoreCase) ? ColorTranslator.FromHtml("#99ca49") : Color.DarkRed;
-                    _status = VARIABLE["W2D_Day2"].ToString();
-                    btnDay1.BackColor = _status.Equals("Attended", StringComparison.OrdinalIgnoreCase) ? ColorTranslator.FromHtml("#99ca49") : Color.DarkRed;
-
-                    string _bgv = VARIABLE["BGV"].ToString();
-
-                    if (_bgv == String.Empty)
+                    lblDtlTOH.Text = VARIABLE["TypeofHire"].ToString();
+                    lblDtlTable.Text = "10";
+                    
+                    lblLapTop.Text = VARIABLE["Laptop_Status"].ToString();
+                    lblLapTop.ForeColor = Color.Black;
+                    lblLapTop.Visible = true;
+                   
+                   
+                    lblBGV.Text = VARIABLE["BGV"].ToString();
+                    lblBGV.Visible = true;
+                    if (lblBGV.Text == String.Empty)
                         pnlBGVStatus.BackColor = ColorTranslator.FromHtml("#99ca49");
                     else
                     {
@@ -122,7 +124,7 @@ namespace OnBoardingDesktopApplication
                 _accDbCon.Open();
                 _dbDataAdapter =
                     new OleDbDataAdapter(
-                        "Select CandidateFirstName,CandidateLastName,CandidateMobilePhone,CandidateEmail,Sequence_Number,Candidate_ID,Employee_ID,Tentative_StartDate,Hiring_Location,Function,TypeofHire,BGV,Laptop_Status,W2D_Day1,W2D_Day2 from OnBoarding where " + searchId,
+                        "Select CandidateFirstName,CandidateLastName,CandidateMobilePhone,CandidateEmail,Sequence_Number,Candidate_ID,Employee_ID,Tentative_StartDate,W2D_OffCycle,Hiring_Location,Function,TypeofHire,BGV,Laptop_Status,W2D_Day1,W2D_Day2 from OnBoarding where " + searchId,
                         _accDbCon);
                 _dtDataTable= new DataTable();
                 _dbDataAdapter.Fill(_dtDataTable);
@@ -325,6 +327,13 @@ namespace OnBoardingDesktopApplication
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+            
+            Screen myScreen = Screen.FromControl(this);
+            Rectangle area = myScreen.WorkingArea;
         }
 
     }

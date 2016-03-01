@@ -33,18 +33,33 @@ namespace OnBoardingDesktopApplication
                 _acDbCommand = new OleDbCommand("Select * from UserCredentials",_accDbCon);
                 //_drDataTableReader = new OleDbDataReader(connection: _accDbCon);
                _drDataTableReader = _acDbCommand.ExecuteReader();
-                
+
+                bool flag = false;
                 while (_drDataTableReader != null && _drDataTableReader.Read())
                 {
-                    string col1 = _drDataTableReader[0].ToString() + "," + _drDataTableReader[1].ToString() + "," + _drDataTableReader[2].ToString();
-                    if (_drDataTableReader == null || !_drDataTableReader[1].ToString().Equals(txtUsername.Text) ||
-                        !_drDataTableReader[2].ToString().Equals(txtPasword.Text)) continue;
+                    
+                    if (_drDataTableReader != null && _drDataTableReader[1].ToString().Equals(txtUsername.Text) &&
+                        _drDataTableReader[2].ToString().Equals(txtPasword.Text))
+                    {
+                        flag = true;
+                        break;
+                    }
+                    
+                }
+                if (flag == true)
+                {
                     var nForm1 = new Form1(txtUsername.Text);
                     //Form1.Username = txtUsername.Text;
                     nForm1.Show();
                     Hide();
-
                 }
+                
+                else
+                    {
+                        MessageBox.Show("Invalid Login Credentials");
+                        txtUsername.Text = "";
+                        txtPasword.Text = "";
+                    }
 
             }
             catch (NullReferenceException)

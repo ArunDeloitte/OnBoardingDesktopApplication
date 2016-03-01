@@ -25,6 +25,7 @@ namespace OnBoardingDesktopApplication
         {
             InitializeComponent();
             lblUser.Text = "USI ITS User";
+            lblLapTop.Visible = false;
         }
 
         private void searchFormITS_Load(object sender, EventArgs e)
@@ -93,15 +94,16 @@ namespace OnBoardingDesktopApplication
                     txtSeqNo.Text = VARIABLE["Sequence_Number"].ToString();
                     txtRMSID.Text = VARIABLE["Candidate_ID"].ToString();
                     txtEmployeeID.Text = VARIABLE["Employee_ID"].ToString();
-                    lblDtlName.Text = VARIABLE["CandidateFirstName"].ToString() + VARIABLE["CandidateLastName"].ToString();
-                    lblDtlRegisteredEmailId.Text = VARIABLE["CandidateEmail"].ToString();
+                    lblDtlName.Text = VARIABLE["CandidateFirstName"].ToString() +" "+ VARIABLE["CandidateLastName"].ToString();
+                    lblDtlEmail.Text = VARIABLE["CandidateEmail"].ToString();
                     lblDtlPhone.Text = VARIABLE["CandidateMobilePhone"].ToString();
-                    lblDtlW2DDate.Text = VARIABLE["Tentative_StartDate"].ToString();
+                    lblOffCycle.Text = DateTime.Parse(VARIABLE["Tentative_StartDate"].ToString()).ToString("yy-MMM-dd ddd") + " " + VARIABLE["W2D_OffCycle"].ToString();
                     lblDtlLocation.Text = VARIABLE["Hiring_Location"].ToString();
                     lblDtlFunction.Text = VARIABLE["Function"].ToString();
-                    lblDtlTOHire.Text = VARIABLE["TypeofHire"].ToString();
-                    lblDtlTableNumber.Text = "10";
-                    lblLaptopStatus.Text = VARIABLE["ITS_Laptop_Status"].ToString();
+                    lblDtlTOH.Text = VARIABLE["TypeofHire"].ToString();
+                    lblDtlTable.Text = "10";
+                    lblLapTop.Text = VARIABLE["ITS_Laptop_Status"].ToString();
+                    lblLapTop.Visible = true;
                     string _status = VARIABLE["W2D_Day1"].ToString();
                     
                 }
@@ -114,7 +116,7 @@ namespace OnBoardingDesktopApplication
                 _accDbCon.Open();
                 _dbDataAdapter =
                     new OleDbDataAdapter(
-                        "Select CandidateFirstName,CandidateLastName,CandidateMobilePhone,CandidateEmail,Sequence_Number,Candidate_ID,Employee_ID,Tentative_StartDate,Hiring_Location,Function,TypeofHire,BGV,ITS_Laptop_Status,W2D_Day1,W2D_Day2 from OnBoarding where " + searchId,
+                        "Select CandidateFirstName,CandidateLastName,CandidateMobilePhone,CandidateEmail,Sequence_Number,Candidate_ID,Employee_ID,Tentative_StartDate,W2D_OffCycle,Hiring_Location,Function,TypeofHire,BGV,ITS_Laptop_Status,W2D_Day1,W2D_Day2 from OnBoarding where " + searchId,
                         _accDbCon);
                 _dtDataTable = new DataTable();
                 _dbDataAdapter.Fill(_dtDataTable);

@@ -63,9 +63,89 @@ namespace OnBoardingDesktopApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BLR___ITS_Screen {
+            get {
+                object obj = ResourceManager.GetObject("BLR - ITS Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BLR___W2D_Screen {
+            get {
+                object obj = ResourceManager.GetObject("BLR - W2D Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GUR___ITS_Screen {
+            get {
+                object obj = ResourceManager.GetObject("GUR - ITS Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GUR___W2D_Screen {
+            get {
+                object obj = ResourceManager.GetObject("GUR - W2D Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HYD___ITS_Screen {
+            get {
+                object obj = ResourceManager.GetObject("HYD - ITS Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HYD___W2D_Screen {
+            get {
+                object obj = ResourceManager.GetObject("HYD - W2D Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logowhite {
             get {
                 object obj = ResourceManager.GetObject("logowhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MUM___ITS_Screen {
+            get {
+                object obj = ResourceManager.GetObject("MUM - ITS Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MUM___W2D_Screen {
+            get {
+                object obj = ResourceManager.GetObject("MUM - W2D Screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

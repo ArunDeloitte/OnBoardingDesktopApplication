@@ -179,19 +179,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logowhite.png" />
-    <Content Include="Resources\W2D - BLR.jpg" />
-    <None Include="Resources\W2D - BLR1.jpg" />
-    <None Include="Resources\W2D - BLR2.jpg" />
-    <None Include="Resources\W2D - GUR1.jpg" />
-    <None Include="Resources\W2D - GUR2.jpg" />
-    <None Include="Resources\W2D - HYD1.jpg" />
-    <None Include="Resources\W2D - HYD2.jpg" />
-    <None Include="Resources\W2D - MUM1.jpg" />
-    <None Include="Resources\W2D - MUM2.jpg" />
-    <None Include="Resources\W2D1 - BLR1.jpg" />
+    <None Include="Resources\BLR - ITS Screen.jpg" />
+    <None Include="Resources\BLR - W2D Screen.jpg" />
+    <Content Include="Resources\BLR_ ITSScreen.jpg" />
+    <Content Include="Resources\BLR_W2DScreen.jpg" />
+    <None Include="Resources\GUR - ITS Screen.jpg" />
+    <None Include="Resources\GUR - W2D Screen.jpg" />
+    <Content Include="Resources\GUR_ITSScreen.jpg" />
+    <Content Include="Resources\GUR_W2DScreen.jpg" />
+    <None Include="Resources\HYD - ITS Screen.jpg" />
+    <None Include="Resources\HYD - W2D Screen.jpg" />
+    <Content Include="Resources\HYD_ITSScreen.jpg" />
+    <Content Include="Resources\HYD_W2DScreen.jpg" />
+    <None Include="Resources\MUM - ITS Screen.jpg" />
+    <None Include="Resources\MUM - W2D Screen.jpg" />
+    <Content Include="Resources\MUM_ITSScreen.jpg" />
+    <Content Include="Resources\MUM_W2DScreen.jpg" />
+    <Content Include="Resources\W2D1 - BLR1.jpg" />
+    <Content Include="Resources\W2D - BLR1.jpg" />
+    <Content Include="Resources\W2D - BLR2.jpg" />
     <Content Include="Resources\W2D - GUR.jpg" />
+    <Content Include="Resources\W2D - GUR1.jpg" />
+    <Content Include="Resources\W2D - GUR2.jpg" />
     <Content Include="Resources\W2D - HYD.jpg" />
+    <Content Include="Resources\W2D - HYD1.jpg" />
+    <Content Include="Resources\W2D - HYD2.jpg" />
     <Content Include="Resources\W2D - MUM.jpg" />
+    <Content Include="Resources\W2D - MUM1.jpg" />
+    <Content Include="Resources\W2D - MUM2.jpg" />
     <Content Include="Resources\W2D1 - BLR.jpg" />
     <Content Include="Resource\dBase\Welcome2Deloitte.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

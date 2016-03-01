@@ -49,12 +49,12 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(29)))), ((int)(((byte)(93)))));
+            this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Controls.Add(this.btnLogOff);
             this.pnlHeader.Controls.Add(this.lblUser);
-            this.pnlHeader.Controls.Add(this.pnlLogo);
             this.pnlHeader.Location = new System.Drawing.Point(2, -1);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(774, 64);
+            this.pnlHeader.Size = new System.Drawing.Size(1272, 78);
             this.pnlHeader.TabIndex = 0;
             // 
             // btnLogOff
@@ -62,7 +62,7 @@
             this.btnLogOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(210)))), ((int)(((byte)(1)))));
             this.btnLogOff.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOff.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogOff.Location = new System.Drawing.Point(638, 4);
+            this.btnLogOff.Location = new System.Drawing.Point(1145, 3);
             this.btnLogOff.Name = "btnLogOff";
             this.btnLogOff.Size = new System.Drawing.Size(105, 30);
             this.btnLogOff.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUser.Location = new System.Drawing.Point(582, 37);
+            this.lblUser.Location = new System.Drawing.Point(1044, 51);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(109, 27);
             this.lblUser.TabIndex = 1;
@@ -87,9 +87,9 @@
             this.pnlNavigation.Controls.Add(this.btnReport);
             this.pnlNavigation.Controls.Add(this.bTNsEARCH);
             this.pnlNavigation.Controls.Add(this.btnOverview);
-            this.pnlNavigation.Location = new System.Drawing.Point(2, 61);
+            this.pnlNavigation.Location = new System.Drawing.Point(2, 74);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(197, 376);
+            this.pnlNavigation.Size = new System.Drawing.Size(209, 595);
             this.pnlNavigation.TabIndex = 1;
             // 
             // btnReport
@@ -137,65 +137,60 @@
             this.pnlOverview.Controls.Add(this.pnlMum);
             this.pnlOverview.Controls.Add(this.pnlBlr);
             this.pnlOverview.Controls.Add(this.pnlHyd);
-            this.pnlOverview.Location = new System.Drawing.Point(205, 69);
+            this.pnlOverview.Location = new System.Drawing.Point(217, 83);
             this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(559, 356);
+            this.pnlOverview.Size = new System.Drawing.Size(1035, 586);
             this.pnlOverview.TabIndex = 2;
             // 
             // pnlGur
             // 
-            this.pnlGur.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.W2D___GUR1;
-            this.pnlGur.Location = new System.Drawing.Point(279, 184);
+            this.pnlGur.Location = new System.Drawing.Point(537, 311);
             this.pnlGur.Name = "pnlGur";
-            this.pnlGur.Size = new System.Drawing.Size(261, 151);
+            this.pnlGur.Size = new System.Drawing.Size(493, 251);
             this.pnlGur.TabIndex = 2;
             // 
             // pnlMum
             // 
-            this.pnlMum.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.W2D___MUM1;
-            this.pnlMum.Location = new System.Drawing.Point(12, 184);
+            this.pnlMum.Location = new System.Drawing.Point(12, 311);
             this.pnlMum.Name = "pnlMum";
-            this.pnlMum.Size = new System.Drawing.Size(261, 151);
+            this.pnlMum.Size = new System.Drawing.Size(511, 251);
             this.pnlMum.TabIndex = 1;
             // 
             // pnlBlr
             // 
-            this.pnlBlr.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.W2D___HYD1;
-            this.pnlBlr.Location = new System.Drawing.Point(279, 14);
+            this.pnlBlr.Location = new System.Drawing.Point(537, 29);
             this.pnlBlr.Name = "pnlBlr";
-            this.pnlBlr.Size = new System.Drawing.Size(261, 151);
+            this.pnlBlr.Size = new System.Drawing.Size(493, 251);
             this.pnlBlr.TabIndex = 1;
             // 
             // pnlHyd
             // 
-            this.pnlHyd.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.W2D1___BLR;
-            this.pnlHyd.Location = new System.Drawing.Point(12, 14);
+            this.pnlHyd.Location = new System.Drawing.Point(12, 29);
             this.pnlHyd.Name = "pnlHyd";
-            this.pnlHyd.Size = new System.Drawing.Size(261, 151);
+            this.pnlHyd.Size = new System.Drawing.Size(511, 251);
             this.pnlHyd.TabIndex = 0;
-            this.pnlHyd.Click += new System.EventHandler(this.pnlHyd_Click);
             // 
             // pnlLogo
             // 
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(29)))), ((int)(((byte)(93)))));
             this.pnlLogo.BackgroundImage = global::OnBoardingDesktopApplication.Properties.Resources.logowhite;
             this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlLogo.Location = new System.Drawing.Point(10, 12);
+            this.pnlLogo.Location = new System.Drawing.Point(10, 13);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(168, 44);
-            this.pnlLogo.TabIndex = 0;
+            this.pnlLogo.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(776, 465);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnlOverview);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
             this.Name = "Form1";
             this.Text = "Welcome2Deloitte";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlNavigation.ResumeLayout(false);
@@ -207,7 +202,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlNavigation;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button bTNsEARCH;
@@ -219,6 +213,7 @@
         private System.Windows.Forms.Panel pnlGur;
         private System.Windows.Forms.Panel pnlMum;
         private System.Windows.Forms.Button btnLogOff;
+        private System.Windows.Forms.Panel pnlLogo;
     }
 }
 
